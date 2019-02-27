@@ -70,6 +70,30 @@ actions:
         validation:
           values: ["master"]
   -
+    code: jean_jacques
+    name: jean_jacques
+    description: Transform your code into Jean Jacques
+    category: custom
+    engine: shell
+    script: jeanjacques.sh
+    params:
+      -
+        code: name
+        name: The name you prefer
+        type: text
+        required: true
+        default: jean-jacques
+        validation:
+          values: ["jean-jacques","jean", "jacques"]
+      -
+        code: source
+        name: The source code
+        type: textarea
+        required: true
+        default: source
+        validation:
+          regex: /source/
+  -
     code: rollback
     name: Rollback
     description: Rollback magento code 
